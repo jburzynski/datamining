@@ -1,0 +1,2020 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/12/2015 7:58:07 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LOCALHOST"
+  DTS:CreatorName="LOCALHOST\lab"
+  DTS:DTSID="{55DC3020-6452-4295-AF8A-2F0719D1A959}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{A1ED12F9-B567-47A9-A696-46BED611C055}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LOCALHOST.Ispjb]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3E2F64D1-2FEE-4B4C-8826-767E3CB9EFD6}"
+      DTS:ObjectName="LOCALHOST.Ispjb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LOCALHOST;Initial Catalog=Ispjb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[notes]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A44A14FC-ED30-4BAF-947F-EDD0B52C9E10}"
+      DTS:ObjectName="notes">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\lab\Documents\184759 bardzotajne\DW\data_dw\notes.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="semester"
+              DTS:DTSID="{B7E12EB1-0DAC-4B09-8773-80F72F0F006E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="year"
+              DTS:DTSID="{24F22318-63EB-47B3-AA6D-FC401F3488B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="course"
+              DTS:DTSID="{6D053F73-F736-40B1-A6A9-F16C0DB399B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teacher_id"
+              DTS:DTSID="{A4624723-6582-43C2-8358-035479F0710A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="note"
+              DTS:DTSID="{33507BA6-4898-41C8-B84D-01960692D8DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="exam"
+              DTS:DTSID="{2ABA5A5C-1094-43D3-ACD2-FD26FCBADC04}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="student_id"
+              DTS:DTSID="{AE360225-B96A-4137-B1C5-418A6D3A0E00}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[students]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3FCCD2BD-7D9E-4341-BB36-3B2B9EC71EB8}"
+      DTS:ObjectName="students">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\lab\Documents\184759 bardzotajne\DW\data_dw\students.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="spec"
+              DTS:DTSID="{D4C5749C-1838-4935-91FB-AF4A7686DA10}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sub_spec"
+              DTS:DTSID="{1F60C1B8-647C-4C0C-9594-C75DEEFC30F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sub_spec2"
+              DTS:DTSID="{484F4ED9-F5D2-4FA7-9B6A-732AFAE028B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{BCC2360B-D510-45DA-9B7C-9DE6DE98C1EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="student_id"
+              DTS:DTSID="{38399977-EEDB-40E0-8AC9-4CB2E02974C1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[teachers]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6688EB58-E89A-4885-8F61-343C83661C6B}"
+      DTS:ObjectName="teachers">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\lab\Documents\184759 bardzotajne\DW\data_dw\teachers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teacher_id"
+              DTS:DTSID="{C7586B85-B094-42BD-A963-8653D49ADCEC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{685C9FDB-1B57-475E-84C5-28864A2EFED2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="faculty"
+              DTS:DTSID="{6D34F266-AA57-48B5-AC24-3EC997ABDCA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="institute"
+              DTS:DTSID="{694FE651-915D-4303-B139-E19FF844EF55}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="title_id"
+              DTS:DTSID="{915766C8-E6A9-4500-ACC8-E72EF119C403}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Consistency assurance"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{5C91B531-B65F-49AA-9083-372621C9A948}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Consistency assurance">
+      <DTS:Variables />
+      <DTS:Executables />
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data clearing"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{C63E38A6-D319-4FA6-88C8-6C09FB8C4BCA}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data clearing">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Data clearing\Clear notes"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{86360093-D258-4B5D-98C0-5D1BD9E7AC7D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Clear notes"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{3E2F64D1-2FEE-4B4C-8826-767E3CB9EFD6}"
+              SQLTask:SqlStatementSource="DELETE FROM [dbo].[Notes]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Data clearing\Clear students"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{5D245586-68BD-410A-9C78-AB290577E345}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Clear students"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{3E2F64D1-2FEE-4B4C-8826-767E3CB9EFD6}"
+              SQLTask:SqlStatementSource="DELETE FROM [dbo].[Students]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Data clearing\Clear teachers"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C966B902-362E-4281-B5AC-BBF4D273AE22}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Clear teachers"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{3E2F64D1-2FEE-4B4C-8826-767E3CB9EFD6}"
+              SQLTask:SqlStatementSource="DELETE FROM [dbo].[Teachers]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Data clearing.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{CC00B442-284A-42EC-8E19-C39C8C6970A2}"
+          DTS:From="Package\Data clearing\Clear notes"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Data clearing\Clear students" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Data clearing.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{6FF37BA3-768F-4385-8D28-F0A71C661A90}"
+          DTS:From="Package\Data clearing\Clear students"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Data clearing\Clear teachers" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data import"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{66F1FE16-2F5E-4FE2-BB69-3ECCA8B619AF}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data import">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Data import\Import notes"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{83E6A5DA-57D9-4289-A134-0A3F326EF036}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Import notes"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Data import\Import notes\Filter notes"
+                  componentClassID="Microsoft.ConditionalSplit"
+                  contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+                  name="Filter notes"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Data import\Import notes\Filter notes.Inputs[Conditional Split Input]"
+                      description="Input to the Conditional Split Transformation"
+                      name="Conditional Split Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Data import\Import notes\Filter notes.Inputs[Conditional Split Input].Columns[note]"
+                          cachedDataType="r4"
+                          cachedName="note"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[note]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Data import\Import notes\Filter notes.Outputs[Correct note]"
+                      description="Output 1 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Correct note"
+                      synchronousInputId="Package\Data import\Import notes\Filter notes.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">#{Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[note]} &gt;= 2</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">note &gt;= 2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">0</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Data import\Import notes\Filter notes.Outputs[Non-note]"
+                      description="Default Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      name="Non-note"
+                      synchronousInputId="Package\Data import\Import notes\Filter notes.Inputs[Conditional Split Input]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsDefaultOut">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Data import\Import notes\Filter notes.Outputs[Conditional Split Error Output]"
+                      description="Error Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Conditional Split Error Output"
+                      synchronousInputId="Package\Data import\Import notes\Filter notes.Inputs[Conditional Split Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Filter notes.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import notes\Filter notes.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Filter notes.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import notes\Filter notes.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Data import\Import notes\Notes DB table"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Notes DB table"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[Notes]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Data import\Import notes\Notes DB table.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LOCALHOST.Ispjb]"
+                      connectionManagerRefId="Package.ConnectionManagers[LOCALHOST.Ispjb]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].Columns[semester]"
+                          cachedDataType="ui1"
+                          cachedName="semester"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[semester]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[semester]" />
+                        <inputColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].Columns[year]"
+                          cachedDataType="ui2"
+                          cachedName="year"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[year]" />
+                        <inputColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].Columns[course]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="course"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[course]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[course]" />
+                        <inputColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].Columns[teacher_id]"
+                          cachedDataType="ui4"
+                          cachedName="teacher_id"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[teacher_id]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[teacher_id]" />
+                        <inputColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].Columns[note]"
+                          cachedDataType="r4"
+                          cachedName="note"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[note]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[note]" />
+                        <inputColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].Columns[exam]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="exam"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[exam]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[exam]" />
+                        <inputColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].Columns[student_id]"
+                          cachedDataType="ui4"
+                          cachedName="student_id"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[student_id]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[student_id]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[semester]"
+                          dataType="ui1"
+                          name="semester" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                          dataType="i4"
+                          name="year" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[course]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="course" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[teacher_id]"
+                          dataType="i8"
+                          name="teacher_id" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[note]"
+                          dataType="r4"
+                          name="note" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[exam]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="exam" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input].ExternalColumns[student_id]"
+                          dataType="i8"
+                          name="student_id" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Data import\Import notes\Notes DB table.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import notes\Notes DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import notes\Notes DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Data import\Import notes\Notes table"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Notes table"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Data import\Import notes\Notes table.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[notes]"
+                      connectionManagerRefId="Package.ConnectionManagers[notes]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[semester]"
+                          dataType="ui1"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[semester]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[semester]"
+                          name="semester"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[year]"
+                          dataType="ui2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[year]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[year]"
+                          name="year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[course]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[course]"
+                          length="10"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[course]"
+                          name="course"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[teacher_id]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[teacher_id]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[teacher_id]"
+                          name="teacher_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[note]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[note]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[note]"
+                          name="note"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[exam]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[exam]"
+                          length="1"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[exam]"
+                          name="exam"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[student_id]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[student_id]"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].Columns[student_id]"
+                          name="student_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[semester]"
+                          dataType="ui1"
+                          name="semester" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[year]"
+                          dataType="ui2"
+                          name="year" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[course]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="course" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[teacher_id]"
+                          dataType="ui4"
+                          name="teacher_id" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[note]"
+                          dataType="r4"
+                          name="note" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[exam]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="exam" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output].ExternalColumns[student_id]"
+                          dataType="ui4"
+                          name="student_id" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Data import\Import notes.Paths[Correct note]"
+                  endId="Package\Data import\Import notes\Notes DB table.Inputs[OLE DB Destination Input]"
+                  name="Correct note"
+                  startId="Package\Data import\Import notes\Filter notes.Outputs[Correct note]" />
+                <path
+                  refId="Package\Data import\Import notes.Paths[Flat File Source Output]"
+                  endId="Package\Data import\Import notes\Filter notes.Inputs[Conditional Split Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Data import\Import notes\Notes table.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Data import\Import students"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{1E492842-DDB8-45C5-9E2D-7D12364D0914}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Import students"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Data import\Import students\Students DB table"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Students DB table"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Students]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Data import\Import students\Students DB table.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LOCALHOST.Ispjb]"
+                      connectionManagerRefId="Package.ConnectionManagers[LOCALHOST.Ispjb]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].Columns[student_id]"
+                          cachedDataType="ui4"
+                          cachedName="student_id"
+                          externalMetadataColumnId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[student_id]"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[student_id]" />
+                        <inputColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].Columns[spec]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="3"
+                          cachedName="spec"
+                          externalMetadataColumnId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[spec]"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[spec]" />
+                        <inputColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].Columns[sub_spec]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="3"
+                          cachedName="sub_spec"
+                          externalMetadataColumnId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[sub_spec]"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[sub_spec]" />
+                        <inputColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].Columns[sub_spec2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="3"
+                          cachedName="sub_spec2"
+                          externalMetadataColumnId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[sub_spec2]"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[sub_spec2]" />
+                        <inputColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].Columns[gender]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="gender"
+                          externalMetadataColumnId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[gender]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[student_id]"
+                          dataType="i8"
+                          name="student_id" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[spec]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="spec" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[sub_spec]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="sub_spec" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[sub_spec2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="sub_spec2" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="gender" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Data import\Import students\Students DB table.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import students\Students DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import students\Students DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Data import\Import students\Students table"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Students table"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Data import\Import students\Students table.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[students]"
+                      connectionManagerRefId="Package.ConnectionManagers[students]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[student_id]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[student_id]"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[student_id]"
+                          name="student_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[spec]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[spec]"
+                          length="3"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[spec]"
+                          name="spec"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[sub_spec]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[sub_spec]"
+                          length="3"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[sub_spec]"
+                          name="sub_spec"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[sub_spec2]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[sub_spec2]"
+                          length="3"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[sub_spec2]"
+                          name="sub_spec2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[gender]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                          length="1"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].Columns[gender]"
+                          name="gender"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[student_id]"
+                          dataType="ui4"
+                          name="student_id" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[spec]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="spec" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[sub_spec]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="sub_spec" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[sub_spec2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="3"
+                          name="sub_spec2" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="gender" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Data import\Import students\Students table.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import students\Students table.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Data import\Import students.Paths[Flat File Source Output]"
+                  endId="Package\Data import\Import students\Students DB table.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Data import\Import students\Students table.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Data import\Import teachers"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{8133be67-9051-4c6d-8778-db17740681da}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Import teachers"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Data import\Import teachers\Teachers DB table"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Teachers DB table"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Teachers]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Data import\Import teachers\Teachers DB table.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LOCALHOST.Ispjb]"
+                      connectionManagerRefId="Package.ConnectionManagers[LOCALHOST.Ispjb]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].Columns[gender]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="gender"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[gender]" />
+                        <inputColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].Columns[teacher_id]"
+                          cachedDataType="ui4"
+                          cachedName="teacher_id"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[teacher_id]"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[teacher_id]" />
+                        <inputColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].Columns[faculty]"
+                          cachedDataType="ui1"
+                          cachedName="faculty"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[faculty]"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[faculty]" />
+                        <inputColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].Columns[institute]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="institute"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[institute]"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[institute]" />
+                        <inputColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].Columns[title_id]"
+                          cachedDataType="ui1"
+                          cachedName="title_id"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[title_id]"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[title_id]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[teacher_id]"
+                          dataType="i8"
+                          name="teacher_id" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="gender" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[faculty]"
+                          dataType="ui1"
+                          name="faculty" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[institute]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="institute" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input].ExternalColumns[title_id]"
+                          dataType="ui1"
+                          name="title_id" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Data import\Import teachers\Teachers DB table.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import teachers\Teachers DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import teachers\Teachers DB table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Data import\Import teachers\Teachers table"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Teachers table"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Data import\Import teachers\Teachers table.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[teachers]"
+                      connectionManagerRefId="Package.ConnectionManagers[teachers]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[gender]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                          length="1"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[gender]"
+                          name="gender"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[teacher_id]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[teacher_id]"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[teacher_id]"
+                          name="teacher_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[faculty]"
+                          dataType="ui1"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[faculty]"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[faculty]"
+                          name="faculty"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[institute]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[institute]"
+                          length="5"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[institute]"
+                          name="institute"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[title_id]"
+                          dataType="ui1"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[title_id]"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].Columns[title_id]"
+                          name="title_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                          dataType="ui1"
+                          name="gender" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[teacher_id]"
+                          dataType="ui4"
+                          name="teacher_id" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[faculty]"
+                          dataType="ui1"
+                          name="faculty" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[institute]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="institute" />
+                        <externalMetadataColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output].ExternalColumns[title_id]"
+                          dataType="ui1"
+                          name="title_id" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Data import\Import teachers.Paths[Flat File Source Output]"
+                  endId="Package\Data import\Import teachers\Teachers DB table.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Data import\Import teachers\Teachers table.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Data import.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{A87DC1D8-870A-4266-8152-FFE5255E2710}"
+          DTS:From="Package\Data import\Import notes"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Data import\Import students" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Data import.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{F78E9955-5B67-45AC-8AED-70BDCF13FAC0}"
+          DTS:From="Package\Data import\Import students"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Data import\Import teachers" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{68514772-50B8-4ED0-BCA0-C36595FA9374}"
+      DTS:From="Package\Data clearing"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data import" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Data clearing\Clear notes"
+          TopLeft="33,15" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Data clearing\Clear students"
+          TopLeft="25,111" />
+        <EdgeLayout
+          Id="Package\Data clearing.PrecedenceConstraints[Constraint]"
+          TopLeft="99.5,57">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Data clearing\Clear teachers"
+          TopLeft="22,216" />
+        <EdgeLayout
+          Id="Package\Data clearing.PrecedenceConstraints[Constraint 1]"
+          TopLeft="97.5,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,390"
+          Size="205,433"
+          Id="Package\Data clearing"
+          TopLeft="164,50" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Data import\Import notes"
+          TopLeft="40,13" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data import\Import students"
+          TopLeft="32,106" />
+        <EdgeLayout
+          Id="Package\Data import.PrecedenceConstraints[Constraint]"
+          TopLeft="110.5,55">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data import\Import teachers"
+          TopLeft="31,209" />
+        <EdgeLayout
+          Id="Package\Data import.PrecedenceConstraints[Constraint 1]"
+          TopLeft="109.5,148">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="214,393"
+          Size="214,436"
+          Id="Package\Data import"
+          TopLeft="476,47" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="369,265.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="107,0"
+              Start="0,0"
+              End="99.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="99.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="218,386"
+          Size="218,429"
+          Id="Package\Consistency assurance"
+          TopLeft="828,47" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data import\Import notes">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data import\Import notes\Notes DB table"
+          TopLeft="111,387" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Data import\Import notes\Notes table"
+          TopLeft="122,95" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Data import\Import notes\Filter notes"
+          TopLeft="122,233" />
+        <EdgeLayout
+          Id="Package\Data import\Import notes.Paths[Flat File Source Output]"
+          TopLeft="188.75,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,96"
+              Start="0,0"
+              End="0,88.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,88.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data import\Import notes.Paths[Correct note]"
+          TopLeft="187.5,275">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,112"
+              Start="0,0"
+              End="0,104.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,104.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-28.0038671875,47.47314453125,56.007734375,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data import\Import notes\Notes DB table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data import\Import students">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Data import\Import students\Students DB table"
+          TopLeft="60,366" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Data import\Import students\Students table"
+          TopLeft="69,60" />
+        <EdgeLayout
+          Id="Package\Data import\Import students.Paths[Flat File Source Output]"
+          TopLeft="143.25,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,264"
+              Start="0,0"
+              End="0,256.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,256.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Data import\Import teachers">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data import\Import teachers\Teachers table"
+          TopLeft="69,59" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Data import\Import teachers\Teachers DB table"
+          TopLeft="62,358" />
+        <EdgeLayout
+          Id="Package\Data import\Import teachers.Paths[Flat File Source Output]"
+          TopLeft="144.75,101">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,257"
+              Start="0,0"
+              End="0,249.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,249.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data import\Import teachers\Teachers DB table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
