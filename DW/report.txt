@@ -1,0 +1,5 @@
+ETL - IS part
+VIEW - AS part
+2-3 "findings" from cube (screenshots)
+
+^ send on e-mail
