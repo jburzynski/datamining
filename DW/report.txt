@@ -1,5 +1,7 @@
 ETL - IS part
 VIEW - AS part
-2-3 "findings" from cube (screenshots)
+2-3 "findings" from cube (screenshots) - how tables depend on each other (e.g. sex of the teacher vs grades)
 
-^ send on e-mail
+describe how NULLs, relationships etc. were fixed
+
+^ send on e-mail - PDF - AT the end of 30.04.2015
