@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{F226F9D6-BCF4-4AC4-85FA-88BF0D196668}">
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{954A89A9-2CB1-48FD-8819-85FC361F2B29}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\lab\Downloads\data_dw\course_group.csv">
+          DTS:ConnectionString="C:\Users\lab\Documents\184759 bardzotajne\DW\data_dw\course_group.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="course"
-              DTS:DTSID="{B8B43826-2C5D-414B-8772-03673EFC66AB}"
+              DTS:DTSID="{DB87954B-5F00-418F-AF09-3802B164BA57}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="course_group"
-              DTS:DTSID="{1D57EE10-5ED3-4AAD-AC6D-87DB15EC0E7E}"
+              DTS:DTSID="{41267156-76B2-49F3-ABFD-0420BA4CAC1D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -85,7 +85,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="semester"
-              DTS:DTSID="{B7E12EB1-0DAC-4B09-8773-80F72F0F006E}"
+              DTS:DTSID="{0760C5DF-0978-4FC7-91A8-1621D3AC94C4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="18"
               DTS:TextQualified="True"
               DTS:ObjectName="year"
-              DTS:DTSID="{24F22318-63EB-47B3-AA6D-FC401F3488B8}"
+              DTS:DTSID="{037B4AD8-E5BD-4103-9AEB-3FB70F757038}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="course"
-              DTS:DTSID="{6D053F73-F736-40B1-A6A9-F16C0DB399B9}"
+              DTS:DTSID="{BFC519BC-1D65-4205-A4D8-6FADDAB83475}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +110,7 @@
               DTS:DataType="19"
               DTS:TextQualified="True"
               DTS:ObjectName="teacher_id"
-              DTS:DTSID="{A4624723-6582-43C2-8358-035479F0710A}"
+              DTS:DTSID="{83A2C9DB-A604-4819-9137-DF5D443B390A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -118,7 +118,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="note"
-              DTS:DTSID="{33507BA6-4898-41C8-B84D-01960692D8DD}"
+              DTS:DTSID="{052DC960-1554-4CF5-96FD-B38CFDFE3B70}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -127,7 +127,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="exam"
-              DTS:DTSID="{2ABA5A5C-1094-43D3-ACD2-FD26FCBADC04}"
+              DTS:DTSID="{C6FB0F18-EC84-40BA-A54D-56E624DDB536}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -135,7 +135,7 @@
               DTS:DataType="19"
               DTS:TextQualified="True"
               DTS:ObjectName="student_id"
-              DTS:DTSID="{AE360225-B96A-4137-B1C5-418A6D3A0E00}"
+              DTS:DTSID="{6082FC57-F6F0-4083-8F41-88F232D3383B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -164,7 +164,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="spec"
-              DTS:DTSID="{D4C5749C-1838-4935-91FB-AF4A7686DA10}"
+              DTS:DTSID="{69A6F9E9-6950-4237-BEB4-5ACD714A986A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +173,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="sub_spec"
-              DTS:DTSID="{1F60C1B8-647C-4C0C-9594-C75DEEFC30F3}"
+              DTS:DTSID="{41CE5229-44E1-4E26-8DFB-90A1A2BC187B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -182,7 +182,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="sub_spec2"
-              DTS:DTSID="{484F4ED9-F5D2-4FA7-9B6A-732AFAE028B0}"
+              DTS:DTSID="{3010AD95-B487-4002-9FA9-11AAE5CFC864}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -191,7 +191,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="gender"
-              DTS:DTSID="{BCC2360B-D510-45DA-9B7C-9DE6DE98C1EB}"
+              DTS:DTSID="{3ECA6439-7735-4FD0-B642-77CDD29C4721}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -199,7 +199,7 @@
               DTS:DataType="19"
               DTS:TextQualified="True"
               DTS:ObjectName="student_id"
-              DTS:DTSID="{38399977-EEDB-40E0-8AC9-4CB2E02974C1}"
+              DTS:DTSID="{F4905E2F-CF45-45FF-B23F-F057C504C1D1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -227,7 +227,7 @@
               DTS:DataType="19"
               DTS:TextQualified="True"
               DTS:ObjectName="teacher_id"
-              DTS:DTSID="{C7586B85-B094-42BD-A963-8653D49ADCEC}"
+              DTS:DTSID="{3B4D5879-83E0-494A-9929-474DDD1E219E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -235,7 +235,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="gender"
-              DTS:DTSID="{685C9FDB-1B57-475E-84C5-28864A2EFED2}"
+              DTS:DTSID="{6E831AC8-3871-4CE4-8607-5474537F5AB9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -243,7 +243,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="faculty"
-              DTS:DTSID="{6D34F266-AA57-48B5-AC24-3EC997ABDCA9}"
+              DTS:DTSID="{74F96DA9-EA64-4A0E-AD1A-69CB34BAB242}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -252,7 +252,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="institute"
-              DTS:DTSID="{694FE651-915D-4303-B139-E19FF844EF55}"
+              DTS:DTSID="{38819CD4-34EC-4A21-9B09-BA32A0E8052A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -260,7 +260,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="title_id"
-              DTS:DTSID="{915766C8-E6A9-4500-ACC8-E72EF119C403}"
+              DTS:DTSID="{FEDFF515-F671-4196-B990-7540C075A75E}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -280,7 +280,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\lab\Downloads\data_dw\teacher_title.csv">
+          DTS:ConnectionString="C:\Users\lab\Documents\184759 bardzotajne\DW\data_dw\teacher_title.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -288,7 +288,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="title_id"
-              DTS:DTSID="{791384D2-3942-482D-B24C-A3257550A3AA}"
+              DTS:DTSID="{54CB865F-61FA-49C6-A9DB-CFF3CA4BB791}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -297,7 +297,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="title_long"
-              DTS:DTSID="{B949F057-36B2-449E-A598-8B39A6A7C05C}"
+              DTS:DTSID="{8B106FBA-CCDE-4123-A312-450A90F84220}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -306,7 +306,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="title"
-              DTS:DTSID="{B1B31E80-B0F8-48A5-91B7-1E850EB25590}"
+              DTS:DTSID="{B253F6D7-62BE-4FE5-A266-7CF54B458A49}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -592,7 +592,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dbo].[CourseGroups]</property>
+                      name="OpenRowset">[CourseGroups]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1402,7 +1402,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dbo].[Students]</property>
+                      name="OpenRowset">[Students]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1797,7 +1797,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dbo].[TeacherTitles]</property>
+                      name="OpenRowset">[TeacherTitles]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2906,13 +2906,13 @@
           Id="Package\Data import"
           TopLeft="476,339" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\Relationships consistency\Notes-Teachers"
-          TopLeft="42,25" />
-        <NodeLayout
           Size="177,42"
           Id="Package\Relationships consistency\Notes-CourseGroups"
           TopLeft="37,131" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Relationships consistency\Notes-Teachers"
+          TopLeft="42,25" />
         <EdgeLayout
           Id="Package\Relationships consistency.PrecedenceConstraints[Constraint]"
           TopLeft="122.25,67">
@@ -3039,7 +3039,7 @@
     design-time-name="Package\Data import\Import course groups">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="173,42"
           Id="Package\Data import\Import course groups\CourseGroups table"
@@ -3067,9 +3067,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3125,7 +3123,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-27.9320442708333,39.46337890625,55.8640885416667,9.5732421875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3149,7 +3147,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-28.0038671875,47.47314453125,56.007734375,9.5537109375"
+              BoundingBox="-60.5009244791667,46.4453125,121.001848958333,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3202,7 +3200,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-20.81349609375,123.4658203125,41.6269921875,9.568359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3226,7 +3224,7 @@
     design-time-name="Package\Data import\Import teacher titles">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170,42"
           Id="Package\Data import\Import teacher titles\TeacherTitles table"
@@ -3254,9 +3252,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3308,7 +3304,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-24.8578059895833,119.96337890625,49.7156119791667,9.5732421875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
