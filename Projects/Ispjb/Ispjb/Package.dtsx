@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="83"
-  DTS:VersionGUID="{954A89A9-2CB1-48FD-8819-85FC361F2B29}">
+  DTS:VersionBuild="91"
+  DTS:VersionGUID="{F8185D47-0DD6-4A7A-B0F0-C16E11E6AD3E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -457,6 +457,23 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
+          DTS:refId="Package\Data consistency\Course groups data"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{ed1960e6-3cd3-4808-bfe7-c41188fe4e0a}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Course groups data"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{3E2F64D1-2FEE-4B4C-8826-767E3CB9EFD6}"
+              SQLTask:SqlStatementSource="DELETE FROM [dbo].[CourseGroups] WHERE course IN(&#xA;&#xA;SELECT c1.course FROM CourseGroups c1&#xA;CROSS JOIN CourseGroups c2&#xA;WHERE c1.course &lt;&gt; c2.course AND&#xA;UPPER(c1.course) = UPPER(c2.course) AND&#xA;LOWER(SUBSTRING(c1.course, 8, 1)) = SUBSTRING(c1.course, 8, 1)&#xA;&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\Data consistency\Notes data"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
@@ -550,6 +567,14 @@
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 2"
           DTS:To="Package\Data consistency\Teacher titles data" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Data consistency.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{64BE62AA-A95C-499B-80D5-5EB630BAB5FF}"
+          DTS:From="Package\Data consistency\Teacher titles data"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Data consistency\Course groups data" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
@@ -2515,7 +2540,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{3E2F64D1-2FEE-4B4C-8826-767E3CB9EFD6}"
-              SQLTask:SqlStatementSource="INSERT INTO CourseGroups VALUES('0123456789', 0);&#xA;&#xA;UPDATE Notes SET course = '0123456789' WHERE course IN(&#xA;&#x9;SELECT DISTINCT n.course FROM Notes n&#xA;&#x9;LEFT JOIN CourseGroups cg ON cg.course = n.course&#xA;&#x9;WHERE cg.course_group IS NULL&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="INSERT INTO CourseGroups VALUES('0123456?89', 0);&#xA;&#xA;UPDATE Notes SET course = '0123456?89' WHERE course IN(&#xA;&#x9;SELECT DISTINCT n.course FROM Notes n&#xA;&#x9;LEFT JOIN CourseGroups cg ON cg.course = n.course&#xA;&#x9;WHERE cg.course_group IS NULL&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2532,7 +2557,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{3E2F64D1-2FEE-4B4C-8826-767E3CB9EFD6}"
-              SQLTask:SqlStatementSource="INSERT INTO Teachers VALUES('?', 99998, 0, '?', 0);&#xA;&#xA;UPDATE Notes SET teacher_id = 99998 WHERE teacher_id IN (&#xA;&#x9;SELECT DISTINCT n.teacher_id FROM Notes n&#xA;&#x9;LEFT JOIN Teachers t ON n.teacher_id = t.teacher_id&#xA;&#x9;WHERE t.teacher_id IS NULL AND n.teacher_id IS NOT NULL&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="INSERT INTO Teachers VALUES('?', 99998, 0, '?', 0);&#xA;&#xA;UPDATE Notes SET teacher_id = 99998 WHERE teacher_id IN (&#xA;&#x9;SELECT DISTINCT n.teacher_id FROM Notes n&#xA;&#x9;LEFT JOIN Teachers t ON n.teacher_id = t.teacher_id&#xA;&#x9;WHERE t.teacher_id IS NULL AND n.teacher_id IS NOT NULL&#xA;);&#xA;&#xA;UPDATE Notes SET teacher_id = 99998 WHERE teacher_id IS NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -2702,6 +2727,10 @@
           Id="Package\Data clearing"
           TopLeft="164,342" />
         <NodeLayout
+          Size="171,42"
+          Id="Package\Data consistency\Course groups data"
+          TopLeft="23,454" />
+        <NodeLayout
           Size="132,42"
           Id="Package\Data consistency\Notes data"
           TopLeft="39,33" />
@@ -2712,7 +2741,7 @@
         <NodeLayout
           Size="168,42"
           Id="Package\Data consistency\Teacher titles data"
-          TopLeft="18,344" />
+          TopLeft="19,343" />
         <NodeLayout
           Size="148,42"
           Id="Package\Data consistency\Teachers data"
@@ -2763,18 +2792,40 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data consistency.PrecedenceConstraints[Constraint 2]"
-          TopLeft="102,278">
+          TopLeft="102.5,278">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,66"
+              EndConnector="0,65"
               Start="0,0"
-              End="0,58.5">
+              End="0,57.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.5" />
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data consistency.PrecedenceConstraints[Constraint 3]"
+          TopLeft="105.75,385">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2786,10 +2837,10 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="210,517"
-          Size="210,560"
+          PanelSize="244,556"
+          Size="244,599"
           Id="Package\Data consistency"
-          TopLeft="828,344" />
+          TopLeft="828,332" />
         <NodeLayout
           Size="183,42"
           Id="Package\Data import\Import course groups"
@@ -2982,9 +3033,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="138,9"
+              EndConnector="138,16.5"
               Start="0,0"
-              End="130.5,9">
+              End="130.5,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2995,13 +3046,13 @@
                     Point2="69,0"
                     Point3="69,4" />
                   <mssgle:LineSegment
-                    End="69,5" />
+                    End="69,12.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="69,5"
-                    Point2="69,9"
-                    Point3="73,9" />
+                    Point1="69,12.5"
+                    Point2="69,16.5"
+                    Point3="73,16.5" />
                   <mssgle:LineSegment
-                    End="130.5,9" />
+                    End="130.5,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3012,18 +3063,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="1038,624.5">
+          TopLeft="1072,628.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="108,0"
+              EndConnector="74,0"
               Start="0,0"
-              End="100.5,0">
+              End="66.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="100.5,0" />
+                    End="66.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3039,7 +3090,7 @@
     design-time-name="Package\Data import\Import course groups">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="173,42"
           Id="Package\Data import\Import course groups\CourseGroups table"
@@ -3067,7 +3118,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3224,7 +3277,7 @@
     design-time-name="Package\Data import\Import teacher titles">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\Data import\Import teacher titles\TeacherTitles table"
@@ -3252,7 +3305,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
