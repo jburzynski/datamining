@@ -80,7 +80,7 @@
   <Attributes>
     <Attribute dwd:design-time-name="6340b8bb-307a-490b-afbc-2599f4570c73">
       <ID>Semester</ID>
-      <Name>Compound</Name>
+      <Name>SemesterWorkload</Name>
       <Usage>Key</Usage>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="fa95f640-579c-40d3-bbd2-194c1dfdeadb">
@@ -120,6 +120,7 @@
           <Name>Teacher Id</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -182,6 +183,7 @@
           <ColumnID>teacher_id</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
