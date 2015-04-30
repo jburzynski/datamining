@@ -5,3 +5,6 @@ VIEW - AS part
 describe how NULLs, relationships etc. were fixed
 
 ^ send on e-mail - PDF - AT the end of 30.04.2015
+
+hmaciej@gmail.com
+subject: DW2015 Jacek Burzynski

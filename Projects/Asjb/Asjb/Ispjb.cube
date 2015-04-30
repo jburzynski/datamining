@@ -8,9 +8,9 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="44" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-13799" scrolltop="-4253" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="35031" y="14420" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="44" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-13799" scrolltop="-4253" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="30930" y="13944" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
-              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
             <mouseicon>
               <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -435,117 +435,117 @@
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="21286d83-97c5-429b-a7f6-22599200745d">
-      <ID>Years</ID>
-      <Name>Years</Name>
-      <DimensionID>Years</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="bb40a5eb-d8ea-42b4-ae35-7750506a0d08">
-          <AttributeID>Year</AttributeID>
-        </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="4c6f2ddd-c2da-4fb6-ae5a-996191add8c7">
-      <ID>Course Groups</ID>
-      <Name>Course Groups</Name>
-      <DimensionID>Course Groups</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="bf851420-a486-4382-9cf2-2458dd62774c">
-          <AttributeID>Course</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="ed6af5de-3f22-43ec-8a8e-83ae43ec3c44">
-          <AttributeID>Course Group</AttributeID>
-        </Attribute>
-      </Attributes>
-      <Hierarchies>
-        <Hierarchy dwd:design-time-name="7c15cfdb-4115-4a6b-ba54-91a2c38e4807">
-          <HierarchyID>Hierarchy</HierarchyID>
-        </Hierarchy>
-      </Hierarchies>
-    </Dimension>
-    <Dimension dwd:design-time-name="dad6e0d5-7e4b-4186-b7c1-2ef2a98c1ae2">
+    <Dimension dwd:design-time-name="83b0c151-c8f3-4128-9022-78e584f958ca">
       <ID>Exam Types</ID>
       <Name>Exam Types</Name>
       <DimensionID>Exam Types</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="a7035388-9396-4c7d-896e-af3aaaf3aebd">
+        <Attribute dwd:design-time-name="390abeb1-975d-43d0-be2b-681586d515da">
           <AttributeID>Exam</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="f333930b-b313-4a6f-8a61-0e46fddfb6a0">
+        <Attribute dwd:design-time-name="349ca7a3-e2db-4883-83a3-44ac56ca495b">
           <AttributeID>Exam Full</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="c1b00b73-08fe-415d-b308-457862ce5941">
-      <ID>Semester Types</ID>
-      <Name>Semester Types</Name>
-      <DimensionID>Semester Types</DimensionID>
+    <Dimension dwd:design-time-name="acb52844-6f82-4e5d-95a0-fef28d74f3c2">
+      <ID>Years</ID>
+      <Name>Years</Name>
+      <DimensionID>Years</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="a77978f9-e267-42ef-b1f6-0ba90a3f0a14">
-          <AttributeID>Semester</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="bc2c3593-9fd5-4099-b305-0ff1c04afdf4">
-          <AttributeID>Semester Type</AttributeID>
+        <Attribute dwd:design-time-name="5e17bf10-f358-48e8-af09-53c87907265b">
+          <AttributeID>Year</AttributeID>
         </Attribute>
       </Attributes>
-      <Hierarchies>
-        <Hierarchy dwd:design-time-name="d6976ca4-255f-46e2-ab4b-0a9505e56c5f">
-          <HierarchyID>Hierarchy</HierarchyID>
-        </Hierarchy>
-      </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="9c411c43-29b1-4956-9d26-a25931e3b669">
-      <ID>Course Types</ID>
-      <Name>Course Types</Name>
-      <DimensionID>Course Types</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="69850193-175e-417d-b7bd-98c2a9b5e236">
-          <AttributeID>Course</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="9e31fa86-8750-4385-999d-138ca9abe557">
-          <AttributeID>Course Type</AttributeID>
-        </Attribute>
-      </Attributes>
-      <Hierarchies>
-        <Hierarchy dwd:design-time-name="a7d266ea-b74b-4af0-ae82-7051acff602d">
-          <HierarchyID>Hierarchy</HierarchyID>
-        </Hierarchy>
-      </Hierarchies>
-    </Dimension>
-    <Dimension dwd:design-time-name="e199c513-63d6-44a4-a940-fb370709ea36">
+    <Dimension dwd:design-time-name="6c74a03e-211e-42e2-ac3d-d052953fc1f2">
       <ID>Academic Years</ID>
       <Name>Academic Years</Name>
       <DimensionID>Academic Years</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="eaa16971-0ec6-4df3-9fce-be10013168ad">
+        <Attribute dwd:design-time-name="367d6605-32be-4a9d-89dc-173359f6f57d">
           <AttributeID>Semester</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="e03fd226-5cf8-4bdc-a8d0-314e8f3efc1e">
+        <Attribute dwd:design-time-name="f37c0b87-f330-4bf1-beae-99d1bd059607">
           <AttributeID>Academic Year</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="feebf7bb-a8bd-4a54-8952-b005cab75987">
+        <Hierarchy dwd:design-time-name="565a7323-08df-40e4-a673-e8c33368a2f4">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="8dc12fd3-ab37-4001-b580-bc74a9b903d2">
+    <Dimension dwd:design-time-name="b109a0d7-5369-4fce-bb93-2adb2fd7fcfc">
+      <ID>Course Groups</ID>
+      <Name>Course Groups</Name>
+      <DimensionID>Course Groups</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4f9fcfa5-50c8-4dc2-b8fb-512a7376f01b">
+          <AttributeID>Course</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="65f47b91-3a59-4162-9652-62167254b907">
+          <AttributeID>Course Group</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="b418cf19-3022-43a5-85c6-4040566c71af">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="2ad38141-03ef-4a29-9bdd-df1874fbfab0">
+      <ID>Course Types</ID>
+      <Name>Course Types</Name>
+      <DimensionID>Course Types</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ab470853-e922-49f4-9073-a3180ed467df">
+          <AttributeID>Course</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f0be0ad-698a-4cc3-8469-a5df10feda02">
+          <AttributeID>Course Type</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="82a3f542-fc2a-4325-be3c-58d258125eb1">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="62725ab8-9c50-48cf-a15b-44d5e9f9b7cf">
+      <ID>Semester Types</ID>
+      <Name>Semester Types</Name>
+      <DimensionID>Semester Types</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="78c9525b-f592-423e-a9b7-89ee5cfbec50">
+          <AttributeID>Semester</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="818fca47-1148-4d27-a08a-4cc47323ecfc">
+          <AttributeID>Semester Type</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="2c224fea-91e2-4628-9f86-b781561f6e93">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="ad17e30e-d3ea-43c9-9067-d9a00d7dfdc4">
       <ID>Teachers Workload</ID>
       <Name>Teachers Workload</Name>
       <DimensionID>Teachers Workload</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="e4af87c0-796a-482b-b829-0bcf8e711736">
+        <Attribute dwd:design-time-name="ef2f96fa-634d-4496-a494-093456638c58">
           <AttributeID>Semester</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="d5783794-d6f8-4f65-9ba7-086a45c7668d">
+        <Attribute dwd:design-time-name="b0274d09-8cff-4224-ab1a-e3cd969a015d">
           <AttributeID>Workload</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="8327c0a6-4488-40b7-9659-4bc9da049893">
-          <AttributeID>Teacher Id</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="b0c26918-e867-43ad-b6f3-2b76fe7de832">
+        <Attribute dwd:design-time-name="b69cce4b-3fd6-4b9e-a4bc-e19e8370eaa5">
           <AttributeID>Semester 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aa096280-d7f3-4f40-87e8-0c23bffc5bd7">
+          <AttributeID>Teacher Id</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
@@ -625,56 +625,17 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d552baaf-abab-4101-8864-e45d2a597db9">
-          <CubeDimensionID>Years</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="d4b260b1-5bc5-4f22-b54b-4da1e0f9fac9">
-              <AttributeID>Year</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="0d4eefa2-4158-4e28-84cf-491374a4054a">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c5aab314-85ab-4b2d-a74a-be4aab1c93a7">
-                    <TableID>dbo_Notes</TableID>
-                    <ColumnID>year</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="33a1b9d4-2e68-45f2-b931-62f67a9a9432">
-          <CubeDimensionID>Course Groups</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="3387251c-4d39-4357-bb25-ffd3fd436c6e">
-              <AttributeID>Course</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="bb0c6367-0404-4e1c-80b8-0211b5270cfe">
-                  <DataType>WChar</DataType>
-                  <DataSize>10</DataSize>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="63fd3747-2955-460f-bcf6-5643e2a84235">
-                    <TableID>dbo_Notes</TableID>
-                    <ColumnID>course</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6afee56d-9887-435a-b6b1-112f8f7a8c55">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="54c50ddd-36b6-412d-85de-0d71c34b6eff">
           <CubeDimensionID>Exam Types</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="8881acfe-b68b-4252-8d11-bbb11c76074a">
+            <Attribute dwd:design-time-name="d0af28a7-d3c2-4970-abf3-61975a95dccb">
               <AttributeID>Exam</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="fbc30768-8c5e-409a-809a-65538fc3f645">
+                <KeyColumn dwd:design-time-name="145ccf46-577c-4cee-8051-8e52b6f0bb35">
                   <DataType>WChar</DataType>
                   <DataSize>1</DataSize>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6df9d0b4-d20c-485d-a075-dd5cbe8e44c8">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="45029c27-76cb-4128-b702-6ec71f1fed51">
                     <TableID>dbo_Notes</TableID>
                     <ColumnID>exam</ColumnID>
                   </Source>
@@ -684,16 +645,35 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f4e2a354-9492-416d-b6bd-092601c4df09">
-          <CubeDimensionID>Semester Types</CubeDimensionID>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="aa0bda47-9096-419a-b8cc-566fc629b389">
+          <CubeDimensionID>Years</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="ca1fece6-e2af-4bb0-9cab-7f993ce2124c">
+            <Attribute dwd:design-time-name="c86baadd-6564-410d-8de9-c95f117de837">
+              <AttributeID>Year</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a46d96de-ef6e-48be-9a5d-5913bd0b9eb2">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f819f941-c225-4bbb-803f-b21b29d5b178">
+                    <TableID>dbo_Notes</TableID>
+                    <ColumnID>year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="40f5647b-d916-4e85-9e3e-834ee226b2f8">
+          <CubeDimensionID>Academic Years</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f8104559-e8e5-47d9-a74d-7c1dcc6e74f1">
               <AttributeID>Semester</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="d47a1bfa-de87-4068-9ea4-33434e58e399">
+                <KeyColumn dwd:design-time-name="dd22796b-dd3f-4e37-a4bf-15a31b568202">
                   <DataType>UnsignedTinyInt</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a2a1071f-1508-4931-b85e-72ebf9a2a690">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ccc95ff6-e52c-4336-addf-f8d3c1e90c47">
                     <TableID>dbo_Notes</TableID>
                     <ColumnID>semester</ColumnID>
                   </Source>
@@ -703,17 +683,17 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e87b4ac8-ab08-46b9-b45f-65f0d55672b0">
-          <CubeDimensionID>Course Types</CubeDimensionID>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a3dd261c-8135-4a8b-bbf4-e752502c9bff">
+          <CubeDimensionID>Course Groups</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="79526321-7a71-4102-ba74-09479231bf89">
+            <Attribute dwd:design-time-name="6ee31772-2c26-442e-bdc8-216a7d315b1c">
               <AttributeID>Course</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="3ab0f66b-67af-4b9e-af08-2b8f315a2c62">
+                <KeyColumn dwd:design-time-name="74cfa63d-a5a8-46c4-af73-f710189f7249">
                   <DataType>WChar</DataType>
                   <DataSize>10</DataSize>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="179460dc-c3e8-44c2-b23c-c05003c08ca4">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7167d839-4d49-4e8c-8b0e-fe1938f87bb8">
                     <TableID>dbo_Notes</TableID>
                     <ColumnID>course</ColumnID>
                   </Source>
@@ -723,16 +703,36 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="112c87b2-342c-4c2f-83a3-b26ebb8ee16c">
-          <CubeDimensionID>Academic Years</CubeDimensionID>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9f3e9556-ec08-4191-8ec4-8811bee1c11c">
+          <CubeDimensionID>Course Types</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="9f248b7d-fc0a-4a3c-935d-c9ae02bcb53b">
+            <Attribute dwd:design-time-name="0a4f3e1b-dc72-43e8-bc9a-7b9e97ba6e88">
+              <AttributeID>Course</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b8b69645-2ec8-442b-887e-0d1c33f6037f">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e72a57f8-0bb2-4e9e-89ae-02407977ef94">
+                    <TableID>dbo_Notes</TableID>
+                    <ColumnID>course</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="211accea-dbf6-4a4a-a157-6acde7bb06a0">
+          <CubeDimensionID>Semester Types</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2f36e8f8-848c-4a22-8712-99298cc443f2">
               <AttributeID>Semester</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="bcb4dadb-fcb2-4ce1-9c51-1ec6bdb85d3c">
+                <KeyColumn dwd:design-time-name="80401caa-3bd0-45cd-b78a-d944bb518411">
                   <DataType>UnsignedTinyInt</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1515bd1a-0742-44c2-8a1c-b95f7fe4177f">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0d41c84b-07b7-4885-a850-0e7cbaa10ae3">
                     <TableID>dbo_Notes</TableID>
                     <ColumnID>semester</ColumnID>
                   </Source>
@@ -742,22 +742,22 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="09776be0-b00c-475f-b85e-8bd67016ba1a">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e1d0138f-1e8c-43e2-bff6-2431a1712e09">
           <CubeDimensionID>Teachers Workload</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="7382a161-8e7d-4732-ace2-98fe6834e201">
+            <Attribute dwd:design-time-name="c754af58-e429-4861-a5d3-411b4b7070c8">
               <AttributeID>Semester</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="610f9a5c-3cd3-4c18-b83f-c9f7952df679">
+                <KeyColumn dwd:design-time-name="661f36e3-7dde-4041-b2c0-357a82bfdfed">
                   <DataType>UnsignedTinyInt</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9f836032-ca31-46b6-bf4d-4501733de8b7">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6284df6b-30dd-49f6-9dbe-d7f83f698890">
                     <TableID>dbo_Notes</TableID>
                     <ColumnID>semester</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn dwd:design-time-name="5d3d38ee-bf6e-4165-ada9-bdb104730a2b">
+                <KeyColumn dwd:design-time-name="213ce7e7-a45b-4fca-b9fe-2f004831e09b">
                   <DataType>BigInt</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="eb4387dd-2308-4c2c-83fa-ef16b600c9b0">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="46a0ab8f-af9f-4540-b6aa-822fdc662a51">
                     <TableID>dbo_Notes</TableID>
                     <ColumnID>teacher_id</ColumnID>
                   </Source>
@@ -787,7 +787,7 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE; 
+CALCULATE;  
 CREATE MEMBER CURRENTCUBE.[Measures].[Notes Avg]
  AS [Measures].[Note Sum]/[Measures].[Note Count], 
 VISIBLE = 1  ; </Text>

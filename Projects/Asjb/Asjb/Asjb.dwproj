@@ -32,24 +32,24 @@
       <FullPath>Years.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Course Groups.dim</Name>
-      <FullPath>Course Groups.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Exam Types.dim</Name>
       <FullPath>Exam Types.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Semester Types.dim</Name>
-      <FullPath>Semester Types.dim</FullPath>
+      <Name>Academic Years.dim</Name>
+      <FullPath>Academic Years.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Course Types.dim</Name>
       <FullPath>Course Types.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Academic Years.dim</Name>
-      <FullPath>Academic Years.dim</FullPath>
+      <Name>Semester Types.dim</Name>
+      <FullPath>Semester Types.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Course Groups.dim</Name>
+      <FullPath>Course Groups.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Teachers Workload.dim</Name>
